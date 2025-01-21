@@ -1,0 +1,49 @@
+@page
+@model Inventory1.Pages.Inventory_Products.Index
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2 class="text-center mb-3">List of Product Inventory</h2>
+
+<a class="btn btn-primary mb-3" href="/Inventory_Products/Create">New Product</a>
+
+<div class="container mt-5">
+    <h2>@ViewData["Title"]</h2>
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Quantity In Stock</th>
+                <th>Price</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model.ProductInfoList.Count == 0)
+            {
+                <tr>
+                    <td colspan="5" class="text-center">No products available.</td>
+                </tr>
+            }
+            else
+            {
+                @foreach (var product in Model.ProductInfoList)
+                {
+                    <tr>
+                        <td>@product.Id</td>
+                        <td>@product.Name</td>
+                        <td>@product.QuantityInStock</td>
+                        <td>@product.Price.ToString("C")</td> <!-- Format price as currency -->
+                        <td style="white-space: nowrap">
+                            <a class="btn btn-primary btn-sm" href="/Inventory_Products/Edit?id=@product.Id">Edit</a>
+                            <a class="btn btn-danger btn-sm" href="/Inventory_Products/Delete?id=@product.Id" 
+                               onclick="return confirm('Are you sure you want to delete this product?');">Delete</a>
+                        </td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+</div>
