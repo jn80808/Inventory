@@ -9,8 +9,24 @@
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
+      "Id": "C:\\Users\\Admin\\Desktop\\Web\\Inventory1\\wwwroot\\css\\styles.css",
+      "PackagePath": "staticwebassets\\css\\styles.css"
+    },
+    {
       "Id": "C:\\Users\\Admin\\Desktop\\Web\\Inventory1\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\Web\\Inventory1\\wwwroot\\img\\DD1-removebG.png",
+      "PackagePath": "staticwebassets\\img\\DD1-removebG.png"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\Web\\Inventory1\\wwwroot\\img\\RT.JPG",
+      "PackagePath": "staticwebassets\\img\\RT.JPG"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\Web\\Inventory1\\wwwroot\\img\\RT2.JPG",
+      "PackagePath": "staticwebassets\\img\\RT2.JPG"
     },
     {
       "Id": "C:\\Users\\Admin\\Desktop\\Web\\Inventory1\\wwwroot\\js\\site.js",

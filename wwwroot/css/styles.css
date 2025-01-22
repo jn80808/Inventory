@@ -1,0 +1,19 @@
+.box3 {
+    background-image: repeating-linear-gradient(
+        135deg,           /* Slant angle for rightward direction */
+        transparent 0,    /* Transparent gap starts */
+        transparent 5px,  /* Transparent gap ends */
+        #cccccc 5px,      /* Dot color starts */
+        #cccccc 7px       /* Dot color ends */
+    );
+}
+
+.box3 > .position-absolute {
+    background-color: transparent; /* Ensure background doesn't interfere */
+}
+
+.box3 .col-md-6 {
+    background-color: white; /* Ensure form card has a white background */
+}
+
+

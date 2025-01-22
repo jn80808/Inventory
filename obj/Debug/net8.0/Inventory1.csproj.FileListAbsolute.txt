@@ -75,3 +75,4 @@ C:\Users\Admin\Desktop\Web\Inventory1\bin\Debug\net8.0\runtimes\win\lib\net8.0\S
 C:\Users\Admin\Desktop\Web\Inventory1\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll
 C:\Users\Admin\Desktop\Web\Inventory1\obj\Debug\net8.0\Inventory1.csproj.AssemblyReference.cache
 C:\Users\Admin\Desktop\Web\Inventory1\obj\Debug\net8.0\Inventory1.csproj.Up2Date
+C:\Users\Admin\Desktop\Web\Inventory1\obj\Debug\net8.0\Inventory1.sourcelink.json

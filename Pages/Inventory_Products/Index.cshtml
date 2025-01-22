@@ -1,49 +1,66 @@
 @page
 @model Inventory1.Pages.Inventory_Products.Index
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Product Inventory";
 }
 
-<h2 class="text-center mb-3">List of Product Inventory</h2>
-
-<a class="btn btn-primary mb-3" href="/Inventory_Products/Create">New Product</a>
-
 <div class="container mt-5">
-    <h2>@ViewData["Title"]</h2>
-    <table class="table table-bordered table-striped">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Name</th>
-                <th>Quantity In Stock</th>
-                <th>Price</th>
-                <th>Action</th>
-            </tr>
-        </thead>
-        <tbody>
-            @if (Model.ProductInfoList.Count == 0)
-            {
+    <!--Title-->
+    <h2 class="text-center mb-4 fw-bold text-primary">@ViewData["Title"]</h2>
+
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <!--Add New Product Button-->
+        <a class="btn btn-warning text-dark fw-bold shadow-sm px-4 py-2" href="/Inventory_Products/Create">
+            <i class="fas fa-plus-circle me-2"></i> Add New Product
+        </a>
+
+    </div>
+
+    <div class="table-responsive shadow rounded bg-white p-3">
+        <table class="table table-hover align-middle text-center">
+            <thead class="table-dark">
                 <tr>
-                    <td colspan="5" class="text-center">No products available.</td>
+                    <!--Table Head-->
+                    <th scope="col" class="text-uppercase">ID</th>
+                    <th scope="col" class="text-uppercase">Product Name</th>
+                    <th scope="col" class="text-uppercase">Stock</th>
+                    <th scope="col" class="text-uppercase">Price</th>
+                    <th scope="col" class="text-uppercase">Actions</th>
                 </tr>
-            }
-            else
-            {
-                @foreach (var product in Model.ProductInfoList)
+            </thead>
+            <tbody>
+                @if (Model.ProductInfoList.Count == 0)
                 {
                     <tr>
-                        <td>@product.Id</td>
-                        <td>@product.Name</td>
-                        <td>@product.QuantityInStock</td>
-                        <td>@product.Price.ToString("C")</td> <!-- Format price as currency -->
-                        <td style="white-space: nowrap">
-                            <a class="btn btn-primary btn-sm" href="/Inventory_Products/Edit?id=@product.Id">Edit</a>
-                            <a class="btn btn-danger btn-sm" href="/Inventory_Products/Delete?id=@product.Id" 
-                               onclick="return confirm('Are you sure you want to delete this product?');">Delete</a>
-                        </td>
+                        <td colspan="5" class="text-muted py-4 fs-5">No products available.</td>
                     </tr>
                 }
-            }
-        </tbody>
-    </table>
+                else
+                {
+                    @foreach (var product in Model.ProductInfoList)
+                    {
+                        <tr>
+                            <td>@product.Id</td>
+                            <td class="text-start">@product.Name</td>
+                            <td class="text-end">@product.QuantityInStock</td>
+                            <td class="text-end">@product.Price.ToString("C")</td>
+                            <td class="d-flex justify-content-center gap-2">
+                                <a class="btn btn-sm btn-outline-primary px-3" href="/Inventory_Products/Edit?id=@product.Id">
+                                    <i class="fas fa-edit me-1"></i> Update
+                                </a>
+                                <a class="btn btn-sm btn-outline-danger px-3" href="/Inventory_Products/Delete?id=@product.Id" 
+                                   onclick="return confirm('Are you sure you want to delete this product?');">
+                                    <i class="fas fa-trash-alt me-1"></i> Delete
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                    <tr class="table-light fw-bold">
+                        <td colspan="3" class="text-end">Total Inventory Value:</td>
+                        <td colspan="2" class="text-end">@Model.TotalInventoryValue.ToString("C")</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
 </div>

@@ -1,24 +1,36 @@
 @page
-@model Inventory1.Pages.Inventory_Products.Create
+@model Inventory1.Pages.Inventory_Products.Update
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Update";
 }
+
+<h1>@ViewData["Title"]</h1>
+
+
 <!-- Outer container (background layer) -->
 <div class="d-flex justify-content-center align-items-center" style="height: 100vh; width: 100%; position: relative; background-color: #f8f9fa;">
 
     <div class="col-md-6 rounded-lg border shadow-lg p-5 position-relative z-index-2" style="background-color: white;">
-        <h1 class="text-center mb-4">New Product</h1> 
+        <h1 class="text-center mb-4">Update Product</h1> 
 
         <!-- Error Message   ---->
-        @if (Model.ErrorMessage.Length > 0){
+        @* @if (Model.ErrorMessage.Length > 0){
             <div class="alert alert-danger alert-dismissible fade show" role="alert">
                 <strong>@Model.ErrorMessage</strong>
                 <button type="button" class="btn-close" data-bs-dismiss="alert" area-label="Close"></button>
             </div>
-        }
+        } *@
 
         <!-- Form ---->
         <form method="post">
+
+            <div class="mb-4">
+                <label for="ProductId" class="form-label">ProductId</label>
+                <input id="ProductId" class="form-control-plaintext" readonly asp-for="ProductId">
+                
+            </div>
+
+
             <div class="mb-4">
                 <label for="Name" class="form-label">Product Name</label>
                 <input id="Name" class="form-control" asp-for="Name">
