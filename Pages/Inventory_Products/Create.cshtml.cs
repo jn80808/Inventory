@@ -34,6 +34,7 @@ namespace Inventory1.Pages.Inventory_Products
                 return;
             }
 
+            // Validation
             if (Name == null) Name="";
             if(QuantityInStock == null) QuantityInStock = 0;
             if(Price == null ) Price = 0.0m; 
@@ -41,6 +42,7 @@ namespace Inventory1.Pages.Inventory_Products
             //Create new Product 
             //Process of Inserting to our data 
             try {
+                
                 string connectionString = "Server=DESKTOP-NSLMOTD;Database=Inventory;Trusted_Connection=True;TrustServerCertificate=True";
                     using (SqlConnection connection = new SqlConnection(connectionString))
                         {

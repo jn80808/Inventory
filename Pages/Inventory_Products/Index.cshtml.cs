@@ -28,7 +28,7 @@ namespace Inventory1.Pages.Inventory_Products
                         {
                             ProductInfo productInfo = new ProductInfo(); 
                             
-                            productInfo.Id = reader.GetInt32(0); // Mapping ProductId
+                            productInfo.ProductId = reader.GetInt32(0); // Mapping ProductId
                             productInfo.Name = reader.GetString(1); // Mapping Name
                             productInfo.QuantityInStock = reader.GetInt32(2); // Mapping QuantityInStock
                             productInfo.Price = reader.GetDecimal(3); // Mapping Price
@@ -60,7 +60,7 @@ namespace Inventory1.Pages.Inventory_Products
 
     public class ProductInfo
     {
-        public int Id { get; set; }
+        public int ProductId { get; set; }
         public string Name { get; set; } = ""; 
         public int QuantityInStock { get; set; } = 0;
         public decimal Price { get; set; } = 0.0m;

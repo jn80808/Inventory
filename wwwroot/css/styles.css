@@ -1,19 +1,126 @@
-.box3 {
-    background-image: repeating-linear-gradient(
-        135deg,           /* Slant angle for rightward direction */
-        transparent 0,    /* Transparent gap starts */
-        transparent 5px,  /* Transparent gap ends */
-        #cccccc 5px,      /* Dot color starts */
-        #cccccc 7px       /* Dot color ends */
-    );
-}
-
-.box3 > .position-absolute {
-    background-color: transparent; /* Ensure background doesn't interfere */
-}
-
-.box3 .col-md-6 {
-    background-color: white; /* Ensure form card has a white background */
+#main-footer{
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 150px;
 }
 
 
+/*  Index page Home*/
+body.index-page {
+    background-image: url('https://i.pinimg.com/736x/91/f6/65/91f6659d62c2fccab484a3d736585834.jpg');
+    background-size: auto; /* No scaling, keeps the original size */
+    background-repeat: repeat; /* Tiling the image */
+    background-position: top left; /* Starts tiling from the top left */
+    height: 100vh; /* Ensure the body takes up the full viewport height */
+    margin: 0; /* Remove default margin */
+}
+
+body.privacy-page {
+  background-image: url('https://i.pinimg.com/736x/83/c0/75/83c0756d14f634ec68216067557646a0.jpg');
+  background-size: auto; /* No scaling, keeps the original size */
+  background-repeat: repeat; /* Tiling the image */
+  background-position: top left; /* Starts tiling from the top left */
+  height: 100vh; /* Ensure the body takes up the full viewport height */
+  margin: 0; /* Remove default margin */
+}
+
+
+
+/* Footer*/
+
+#main-footer{
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+    margin-top: 5px;
+}
+
+
+/* update button  */
+
+.btn-outline-primary {
+  border-color: #ffc107 !important;  /* Set the border to #FF9D72 */
+  color: #000 !important;         /* Bootstrap primary blue text color */
+  background-color: transparent !important; /* Ensure background is transparent */
+}
+
+.btn-outline-primary:hover {
+  background-color: #ffc107 !important;  /* Change background on hover */
+  border-color: #ffc107 !important;      /* Keep border same on hover */
+  color: #000 !important;                /* Change text color to black on hover */
+}
+
+
+
+
+.btn-update {
+    border: 1px solid #3AB4F2; /* Your specified color */
+    color: #3AB4F2;
+    padding-left: 1rem; /* Equivalent to px-3 */
+    padding-right: 1rem;
+    font-size: 0.875rem; /* Equivalent to btn-sm */
+    background-color: transparent;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .btn-update:hover {
+    background-color: #3AB4F2;
+    color: white;
+  }
+
+  
+
+  .btn-updcancel {
+    background-color: #3AB4F2;
+    color: white;
+    border: 1px solid #3AB4F2; /* Optional: to keep the outline color */
+  }
+  
+  .btn-updcancel:hover {
+    background-color: #3AB4F2; /* Same as the default background color */
+    color: white; /* Ensure text stays white */
+    border: 1px solid #3AB4F2; 
+  }
+  
+  .btn-updsubmit {
+    background-color: #ffc107 ;
+    color: #1f2020;
+    border: none; /* Optional: if you want to remove the button border */
+  }
+  
+  .btn-updsubmit:hover {
+    background-color: #ffc107 ; /* Optional: darker shade for hover effect */
+    color: #1f2020;
+    border: 1px solid #ffc107 ;
+  }
+  
+
+/* Delete Button  */
+    /* Default button styles */
+    .delete-btn, .cancel-btn {
+        background-color: #D8D9DA;
+        border: none;
+        color: #333;
+        font-weight: bold;
+        padding: 10px;
+        transition: background-color 0.3s ease-in-out;
+    }
+
+    /* Hover effects */
+    .delete-btn:hover {
+        background-color: #F45050;
+        color: #fff;
+    }
+
+    .cancel-btn:hover {
+        background-color: #3AB4F2;
+        color: #fff;
+    }
+
+    /* Center align text */
+    p, h2 {
+        text-align: center;
+    }

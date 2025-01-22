@@ -40,16 +40,15 @@
                     @foreach (var product in Model.ProductInfoList)
                     {
                         <tr>
-                            <td>@product.Id</td>
+                            <td>@product.ProductId</td>
                             <td class="text-start">@product.Name</td>
                             <td class="text-end">@product.QuantityInStock</td>
                             <td class="text-end">@product.Price.ToString("C")</td>
                             <td class="d-flex justify-content-center gap-2">
-                                <a class="btn btn-sm btn-outline-primary px-3" href="/Inventory_Products/Edit?id=@product.Id">
+                                <a class="btn btn-sm btn-outline-primary px-3" href="/Inventory_Products/Update?ProductId=@product.ProductId">
                                     <i class="fas fa-edit me-1"></i> Update
                                 </a>
-                                <a class="btn btn-sm btn-outline-danger px-3" href="/Inventory_Products/Delete?id=@product.Id" 
-                                   onclick="return confirm('Are you sure you want to delete this product?');">
+                                 <a class="btn btn-sm btn-outline-danger px-3" href="/Inventory_Products/Delete?ProductId=@product.ProductId"> @* urlpage *@
                                     <i class="fas fa-trash-alt me-1"></i> Delete
                                 </a>
                             </td>
@@ -64,3 +63,5 @@
         </table>
     </div>
 </div>
+
+    <div style="margin-top:100px; margin-bottom:100px"></div>

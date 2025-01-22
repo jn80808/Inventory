@@ -7,7 +7,7 @@
 <div class="d-flex justify-content-center align-items-center" style="height: 100vh; width: 100%; position: relative; background-color: #f8f9fa;">
 
     <div class="col-md-6 rounded-lg border shadow-lg p-5 position-relative z-index-2" style="background-color: white;">
-        <h1 class="text-center mb-4">New Product</h1> 
+        <h1 class="text-center mb-4">Add New Product</h1> 
 
         <!-- Error Message   ---->
         @if (Model.ErrorMessage.Length > 0){
@@ -33,7 +33,7 @@
 
             <div class="mb-4">
                 <label for="Price" class="form-label">Price</label>
-                <input id="Price" class="form-control" asp-for="Price" type="number" step="1" min="0" oninput="if(this.value < 0) this.value = ''; ">
+                <input id="Price" class="form-control" asp-for="Price" type="number" step="0.01" min="0" oninput="if(this.value < 0) this.value = ''; "> <!--  step="0.01" :#1f2020 To Accept decimal value-->
                 <span asp-validation-for="Price" class="text-danger"></span> <!-- Validation error -->
             </div>
 
@@ -42,7 +42,7 @@
                     <button type="submit" class="btn" style="background-color: #ffc107; color: #1f2020;"><b>Submit</b></button>
                 </div>
                 <div class="col-sm-6 d-grid mb-3">
-                    <a class="btn btn-outline-secondary" href="/Inventory_Products/Index" role="button"><b>Cancel</b></a>
+                    <a class="btn btn-updcancel" href="/Inventory_Products/Index" role="button"><b>Cancel</b></a>
                 </div>
             </div>
         </form>
