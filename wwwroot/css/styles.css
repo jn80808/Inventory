@@ -8,7 +8,7 @@
 
 
 /*  Index page Home*/
-body.index-page {
+.cbody.index-page {
     background-image: url('https://i.pinimg.com/736x/91/f6/65/91f6659d62c2fccab484a3d736585834.jpg');
     background-size: auto; /* No scaling, keeps the original size */
     background-repeat: repeat; /* Tiling the image */
@@ -16,6 +16,8 @@ body.index-page {
     height: 100vh; /* Ensure the body takes up the full viewport height */
     margin: 0; /* Remove default margin */
 }
+
+
 
 body.privacy-page {
   background-image: url('https://i.pinimg.com/736x/83/c0/75/83c0756d14f634ec68216067557646a0.jpg');
@@ -124,3 +126,228 @@ body.privacy-page {
     p, h2 {
         text-align: center;
     }
+
+    /*--------------------------*/
+    /*-------- indexhtml1------*/
+    /*--------------------------*/
+    
+    
+.main-container4{
+  height: 16vh;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr; 
+  grid-template-rows: 1fr 1fr; 
+  grid-auto-flow: dense; /*compressing the elements in 1 column */
+
+  padding: 8px;
+  margin:8px 0px;
+}
+
+.main-content4{
+  grid-column-start: 2; /*using this we can declare san sya pwede mag start*/
+  text-align: center;
+}
+
+.left-sidebar4{
+  grid-column-start: 1; 
+  text-align: center;
+
+}
+
+
+.right-sidebar4{
+  grid-column-start: 3; 
+  text-align: center;
+}
+
+.main-container5 {
+  height: 40vh;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr; 
+  grid-template-rows: 1fr 1fr; 
+  grid-auto-flow: dense; /* Compress elements in 1 column */
+  padding: 20px;
+  margin: 20px 0px;
+}
+
+.feature-box {
+  display: flex;
+  flex-direction: column; /* Ensure icon and text are vertically aligned */
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 20px;
+  height: 100%; /* Ensure all feature boxes are the same height */
+  display: flex;
+  align-items: center;
+}
+
+.feature-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.feature-icon-container {
+  background-color: #ffc107;
+  border-radius: 50%;
+  padding: 15px;
+  margin-right: 15px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.feature-icon {
+  font-size: 1.8em;
+  color: #808080; /* Set the icon color to gray */
+}
+
+.feature-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Align text vertically */
+  text-align: center;
+}
+
+.textleft {
+  text-align: left;
+  color: #333;
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+.textleft b {
+  color: #222324;
+}
+
+.row {
+  margin-bottom: 20px;
+}
+
+.container {
+  max-width: 2000px;
+}
+
+.textleft {
+  text-align: left;
+  color: #333;
+}
+
+.textleft b {
+  color: #2b2c2d;
+}
+
+.row {
+  margin-bottom: 20px;
+}
+
+.container {
+  max-width: 2000px;
+}
+
+.textleft {
+  text-align: left;
+  color: #333;
+}
+
+.textleft b {
+  color: #2b2c2d;
+}
+
+.row {
+  margin-bottom: 20px;
+}
+
+.indcustom-btn {
+  background-color: transparent !important; /* Transparent background */
+  color: black !important;
+  border: 1px solid gray !important;
+  margin-right: 10px;  /* Add space between buttons */
+  padding: 10px 20px;  /* Adjust button size */
+  font-weight: bold;   /* Optional for better visibility */
+}
+
+.indcustom-btn:last-child {
+  margin-right: 0;  /* Remove margin from the last button */
+}
+
+.indcustom-btn:hover {
+  background-color: #ffc107 !important;
+  color: black !important;
+}
+
+/* @* carousel *@ */
+.carousel-image {
+  max-width: 100%;  /* Ensures the image fits within the container */
+  max-height: 500px; /* Adjust the height as needed */
+  object-fit: cover; /* Ensures the aspect ratio is maintained and the image doesn't stretch */
+}
+
+.carousel-inner {
+  max-width: 100%;
+}
+
+/* Optional: Adjust the height of the carousel container */
+.carousel-item {
+  height: 500px; /* Adjust the height for the carousel */
+}
+
+/* footer  */
+
+    /* General styling for footer */
+    footer {
+      background-color: #343a40;
+      color: #f8f9fa;
+  }
+  
+  /* For better contrast */
+  .nav-link {
+      font-size: 1rem;
+  }
+
+  .nav-link:hover {
+      text-decoration: underline;
+  }
+
+  /* Hover effect for links */
+  .hover-link:hover {
+      color: #00aaff;
+      text-decoration: underline;
+  }
+
+  /* Input and button styles */
+  input.form-control {
+      border-radius: 0.25rem;
+      padding: 0.75rem 1rem;
+  }
+
+  button.btn-primary {
+      border-radius: 0.25rem;
+      padding: 0.75rem 1rem;
+      transition: background-color 0.3s;
+  }
+
+  button.btn-primary:hover {
+      background-color: #007bff;
+  }
+
+  /* Footer icons */
+  .bi {
+      font-size: 1.5rem;
+      transition: color 0.3s;
+  }
+
+  .bi:hover {
+      color: #00aaff;
+  }
+
+
+
+  /* NavBar */
+
+  
